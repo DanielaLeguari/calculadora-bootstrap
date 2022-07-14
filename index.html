@@ -5,53 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CALCULADORA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
 
     <script src="calculadora.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   </head>
   <body>
-    <h1>Calculadora</h1>
-    <div class="row">
-      Digite o primeiro número:
-      <input type="text" id="inputNumero1" />
-    </div>
+    <div class="container-fluid">
+      <h1>Calculadora</h1>
 
-    <div class="row">Digite o segundo número:
-        <input type="text" id="inputNumero2" />
-    </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="inputNumero1" class="form-label"
+            >Digite o primeiro número:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="inputNumero1"
+            placeholder=""
+          />
+        </div>
+      </div>
 
-    <div>
-        Escolha uma operação:
-      <select
-        class="form-select form-select-lg mb-3"
-        aria-label=".form-select-lg example"
-        id="operacao"
-      >
-        <option selected value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-      </select>
-    </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="formGroupExampleInput" class="form-label"
+            >Digite o segundo número:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="inputNumero2"
+            placeholder=""
+          />
+        </div>
+      </div>
 
-    <div>
-        <button 
+      <div class="row">
+        <div class="col-md-6">
+          Escolha uma operação:
+          <select
+            class="form-select form-select-lg mb-3"
+            aria-label=".form-select-lg example"
+            id="operacao"
+          >
+            <option selected value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <button
+            class="btn btn-primary"
             type="button"
             onclick="funcaoPrincipalDocument()"
-        >
-          calcular com document 
-        </button>
-
-        <button 
+          >
+            Calcular com document
+          </button>
+          <button
+            class="btn btn-primary"
             type="button"
             onclick="funcaoPrincipalJQuery()"
-        >
-          calcular com JQuery
-        </button>
-    </div>
+          >
+            Calcular com JQuery
+          </button>
+        </div>
+      </div>
 
-    <div>Resultado:
-        <input type="text" id="inputResultado" />
+      <div class="row">
+        <div class="col-md-6">
+          <label for="formGroupExampleInput" class="form-label"
+            >Resultado:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="inputResultado"
+            placeholder=""
+          />
+        </div>
+      </div>
     </div>
   </body>
 </html>
