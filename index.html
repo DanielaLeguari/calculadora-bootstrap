@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCULADORA</title>
+
+    <script src="calculadora.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <div class="row">
+      Digite o primeiro número:
+      <input type="text" id="inputNumero1" />
+    </div>
+
+    <div class="row">Digite o segundo número:
+        <input type="text" id="inputNumero2" />
+    </div>
+
+    <div>
+        Escolha uma operação:
+      <select
+        class="form-select form-select-lg mb-3"
+        aria-label=".form-select-lg example"
+        id="operacao"
+      >
+        <option selected value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+    </div>
+
+    <div>
+        <button 
+            type="button"
+            onclick="funcaoPrincipalDocument()"
+        >
+          calcular com document 
+        </button>
+
+        <button 
+            type="button"
+            onclick="funcaoPrincipalJQuery()"
+        >
+          calcular com JQuery
+        </button>
+    </div>
+
+    <div>Resultado:
+        <input type="text" id="inputResultado" />
+    </div>
+  </body>
+</html>
